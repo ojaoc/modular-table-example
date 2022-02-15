@@ -1,5 +1,7 @@
 export interface Data {
-  name: string;
-  age: number;
-  address: string;
+  header: string[];
+  props: string[];
+  body: {
+    [key: string]: any;
+  }[];
 }
