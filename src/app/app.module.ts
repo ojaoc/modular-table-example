@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { en_US, NZ_I18N } from "ng-zorro-antd/i18n";
+import { NzIconModule } from "ng-zorro-antd/icon";
 import { NzTableModule } from "ng-zorro-antd/table";
 import { AppComponent } from "./app.component";
 import { TableComponent } from "./shared/components/table/table.component";
@@ -22,6 +23,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NzTableModule,
     DragDropModule,
+    NzIconModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
