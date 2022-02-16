@@ -9,7 +9,12 @@
         class="example-list"
         (cdkDropListDropped)="drop($event)"
       >
-        <th class="example-box" *ngFor="let header of dataSet.header" cdkDrag>
+        <th
+          class="example-box"
+          *ngFor="let header of dataSet.header"
+          cdkDragLockAxis="x"
+          cdkDrag
+        >
           {{ header }}
         </th>
       </tr>
