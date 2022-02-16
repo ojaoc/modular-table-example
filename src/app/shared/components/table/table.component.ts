@@ -1,4 +1,4 @@
-import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
+import { CdkDragSortEvent, moveItemInArray } from "@angular/cdk/drag-drop";
 import { Component, OnInit } from "@angular/core";
 import { dataset } from "src/app/core/mocks/dataset";
 import { Data } from "src/app/core/models/data";
@@ -17,14 +17,9 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  drop(event: CdkDragDrop<string[]>) {
+  sort(event: CdkDragSortEvent<{ name: string; title: string }[]>) {
     moveItemInArray(
       event.container.data,
-      event.previousIndex,
-      event.currentIndex
-    );
-    moveItemInArray(
-      this.dataSet.props,
       event.previousIndex,
       event.currentIndex
     );

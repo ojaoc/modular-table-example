@@ -1,9 +1,21 @@
 import { Data } from "../models/data";
 
 export const dataset: Data = {
-  header: ["Name", "Age", "Address"],
-  props: ["name", "age", "address"],
-  body: [
+  columns: [
+    {
+      name: "name",
+      title: "Name",
+    },
+    {
+      name: "age",
+      title: "Age",
+    },
+    {
+      name: "address",
+      title: "Address",
+    },
+  ],
+  data: [
     {
       name: "Franchot MacCroary",
       age: 67,

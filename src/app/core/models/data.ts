@@ -1,7 +1,6 @@
 export interface Data {
-  header: string[];
-  props: string[];
-  body: {
+  columns: { name: string; title: string }[];
+  data: {
     [key: string]: any;
   }[];
 }
