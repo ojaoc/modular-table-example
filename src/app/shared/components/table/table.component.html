@@ -1,31 +1,26 @@
-<div class="table-container">
-  <nz-table #basicTable [nzData]="dataSet.data">
-    <thead>
-      <tr
-        cdkDropList
-        cdkDropListOrientation="horizontal"
-        #todoList="cdkDropList"
-        [cdkDropListData]="dataSet.columns"
-        class="example-list"
-        (cdkDropListSorted)="sort($event)"
-      >
-        <th
-          class="example-box"
-          *ngFor="let column of dataSet.columns"
-          cdkDragLockAxis="x"
-          cdkDrag
-        >
-          {{ column.title }}
-          <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of basicTable.data">
-        <td *ngFor="let column of dataSet.columns">
-          {{ data[column.name] }}
-        </td>
-      </tr>
-    </tbody>
-  </nz-table>
-</div>
+<nz-list nzBordered>
+  <div
+    nz-row
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    #todoList="cdkDropList"
+    [cdkDropListData]="dataSet.columns"
+    class="example-list"
+    (cdkDropListSorted)="sort($event)"
+  >
+    <div
+      nz-col
+      *ngFor="let column of dataSet.columns"
+      cdkDragLockAxis="x"
+      cdkDrag
+    >
+      <nz-list-header class="example-box" cdkDragHandle>
+        {{ column.title }}
+        <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
+      </nz-list-header>
+      <nz-list-item *ngFor="let item of dataSet.data">
+        {{ item[column.name] }}
+      </nz-list-item>
+    </div>
+  </div>
+</nz-list>
