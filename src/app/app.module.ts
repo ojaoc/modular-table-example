@@ -11,11 +11,15 @@ import { NzIconModule } from "ng-zorro-antd/icon";
 import { NzTableModule } from "ng-zorro-antd/table";
 import { AppComponent } from "./app.component";
 import { TableComponent } from "./shared/components/table/table.component";
+import { FilterTableComponent} from "./shared/components/table/filter-table-modal/filter-table-modal.component"
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, TableComponent],
+  declarations: [AppComponent, TableComponent, FilterTableComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -24,6 +28,8 @@ registerLocaleData(en);
     NzTableModule,
     DragDropModule,
     NzIconModule,
+    NzModalModule,
+    NzCheckboxModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

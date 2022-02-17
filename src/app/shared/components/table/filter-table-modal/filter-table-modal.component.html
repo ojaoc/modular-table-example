@@ -1,0 +1,36 @@
+<!-- <ng-container *transloco="let t">
+          <nz-modal
+            nzWidth="35.2rem"
+            nzClassName="modal--confirm modal--warning modal--delete-context"
+            [nzAutofocus]="null"
+            (nzOnCancel)="handleCancel()"
+          >
+            <ng-container *nzModalContent>
+              <ng-container *aeroLoading="isUnlocking; styles: 'height:8.8rem'">
+                <ng-content></ng-content>
+              </ng-container>
+            </ng-container>
+        
+            <ng-container *nzModalFooter>
+              <div *ngIf="!isUnlocking">
+                <button type="button" class="button button--secondary" (click)="handleCancel()">
+                  <span class="button__body">{{ t('common.actions.no') }}</span>
+                </button>
+        
+                <button type="submit" class="button button--primary" (click)="handleConfirm()">
+                  <span class="button__body">{{ t('common.actions.yes') }}</span>
+                </button>
+              </div>
+            </ng-container>
+          </nz-modal>
+</ng-container> -->
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" 
+          (nzOnCancel)="handleCancel()" 
+          (nzOnConfirm)="handleConfirm()">
+          <ng-container *nzModalContent>
+            <p>Content one</p>
+            <p>Content two</p>
+            <p>Content three</p>
+          </ng-container>
+</nz-modal>

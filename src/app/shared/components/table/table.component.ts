@@ -10,10 +10,25 @@ import { Data } from "src/app/core/models/data";
 })
 export class TableComponent implements OnInit {
   dataSet: Data;
+  isVisible = false;
+  checked = true;
 
   constructor() {
     this.dataSet = dataset;
   }
+
+  showModal(): void {
+          this.isVisible = true;
+
+}
+
+handleConfirm(): void {
+          this.isVisible = false;
+}
+
+handleCancel(): void {
+          this.isVisible = false;
+}
 
   ngOnInit(): void {}
 
