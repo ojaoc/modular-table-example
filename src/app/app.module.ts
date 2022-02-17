@@ -10,13 +10,15 @@ import { NzGridModule } from 'ng-zorro-antd/grid'
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n'
 import { NzIconModule } from 'ng-zorro-antd/icon'
 import { NzListModule } from 'ng-zorro-antd/list'
+import { NzPaginationModule } from 'ng-zorro-antd/pagination'
 import { AppComponent } from './app.component'
 import { TableComponent } from './shared/components/table/table.component'
+import { PaginationPipe } from './shared/pipes/pagination.pipe'
 
 registerLocaleData(en)
 
 @NgModule({
-  declarations: [AppComponent, TableComponent],
+  declarations: [AppComponent, TableComponent, PaginationPipe],
   imports: [
     BrowserModule,
     FormsModule,
@@ -26,6 +28,7 @@ registerLocaleData(en)
     DragDropModule,
     NzIconModule,
     NzGridModule,
+    NzPaginationModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
