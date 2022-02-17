@@ -13,7 +13,7 @@ import { NzListModule } from 'ng-zorro-antd/list'
 import { NzPaginationModule } from 'ng-zorro-antd/pagination'
 import { AppComponent } from './app.component'
 import { TableComponent } from './shared/components/table/table.component'
-import { PaginationPipe } from './shared/pipes/pagination.pipe'
+import { PaginationPipe } from './shared/pipes/pagination/pagination.pipe'
 
 registerLocaleData(en)
 
