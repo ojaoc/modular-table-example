@@ -1,0 +1,19 @@
+<div class="table-container">
+  <nz-table #basicTable [nzData]="dataSet.data">
+    <thead>
+      <tr class="example-list">
+        <th class="example-box" *ngFor="let column of dataSet.columns">
+          {{ column.title }}
+          <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td *ngFor="let column of dataSet.columns">
+          {{ data[column.name] }}
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

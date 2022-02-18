@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableComponent } from './table.component';
+import { TableWithDraggerComponent } from './table-with-dragger.component';
 
-describe('TableComponent', () => {
-  let component: TableComponent;
-  let fixture: ComponentFixture<TableComponent>;
+describe('TableWithDraggerComponent', () => {
+  let component: TableWithDraggerComponent;
+  let fixture: ComponentFixture<TableWithDraggerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableComponent],
+      declarations: [TableWithDraggerComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TableComponent);
+    fixture = TestBed.createComponent(TableWithDraggerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
