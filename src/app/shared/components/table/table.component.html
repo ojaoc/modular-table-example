@@ -1,31 +1,20 @@
 <div class="table-container">
+  <!-- Filter table -->
+  <div>
+    <button
+      type="button"
+      class="button icon-button table-util__customize-button"
+      nzPlacement="bottomRight"
+      (click)="showModal()"
+    >
+      <app-filter-table-modal
+        [(isVisible)]="isVisible"
+        [filterData]="dataSet"
+      ></app-filter-table-modal>
 
-          <!-- Filter table -->
-          <div>
-          <button
-                    type="button"
-                    class="button icon-button table-util__customize-button"
-                    nzPlacement="bottomRight"
-                    (click)="showModal()"
-                  >
-                  <nz-modal [(nzVisible)]="isVisible" nzTitle="Filter table headers" 
-                  (nzOnCancel)="handleCancel()" 
-                  (nzOnOk)="handleConfirm()">
-                  <ng-container *nzModalContent>
-                    <p class="example-box" *ngFor="let column of dataSet.columns">
-                              <span  nz-checkbox [(ngModel)]="column.checked">
-                                        {{ column.title }}
-                                        <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
-                              </span>
-                  </p>   
-                  </ng-container>
-        </nz-modal>
-        
-                  <span class="material-icons">
-                    filter_list
-                    </span>
-          </button>
-          </div>
+      <span class="material-icons"> filter_list </span>
+    </button>
+  </div>
 
   <nz-table #basicTable [nzData]="dataSet.data">
     <thead>

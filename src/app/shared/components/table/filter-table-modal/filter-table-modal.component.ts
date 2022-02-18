@@ -1,28 +1,28 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from '@angular/core';
+import { Data } from 'src/app/core/models/data';
 @Component({
   selector: 'app-filter-table-modal',
   templateUrl: './filter-table-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FilterTableComponent {
+  @Input() filterData!: Data
 
-isVisible = false;
+  @Input() isVisible: boolean;
 
-constructor(){}
+  @Output() isVisibleChange: EventEmitter<boolean> = new EventEmitter();
 
+  constructor() {
+    this.isVisible = false;
+  }
 
-showModal(): void {
-          this.isVisible = true;
+  handleConfirm(): void {
+    this.isVisible = false
+    this.isVisibleChange.emit(this.isVisible)
+  }
 
-}
-
-handleConfirm(): void {
-          this.isVisible = false;
-}
-
-handleCancel(): void {
-          this.isVisible = false;
-}
-
+  handleCancel(): void {
+    this.isVisible = false
+    this.isVisibleChange.emit(this.isVisible)
+  }
 }
