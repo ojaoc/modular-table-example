@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { dataset } from './core/mocks/dataset';
+import { Data } from './core/models/data';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  tableData: Data;
+
+  constructor() {
+    this.tableData = dataset;
+  }
 }

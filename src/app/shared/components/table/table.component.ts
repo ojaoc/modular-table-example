@@ -1,6 +1,5 @@
 import { CdkDragSortEvent, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, OnInit } from '@angular/core';
-import { dataset } from 'src/app/core/mocks/dataset';
+import { Component, Input, OnInit } from '@angular/core';
 import { Data } from 'src/app/core/models/data';
 
 @Component({
@@ -9,19 +8,32 @@ import { Data } from 'src/app/core/models/data';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  dataSet: Data;
+  @Input() dataSet: Data;
+
+  page: number;
+  size: number;
 
   constructor() {
-    this.dataSet = dataset;
+    this.dataSet = { columns: [], data: [] };
+    this.page = 1;
+    this.size = 10;
   }
 
   ngOnInit(): void {}
 
-  sort(event: CdkDragSortEvent<{ name: string; title: string }[]>) {
+  reorderCol(event: CdkDragSortEvent<{ name: string; title: string }[]>) {
     moveItemInArray(
       event.container.data,
       event.previousIndex,
       event.currentIndex
     );
+  }
+
+  changePage(newPage: number) {
+    this.page = newPage;
+  }
+
+  changeSize(newSize: number) {
+    this.size = newSize;
   }
 }

@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -15,7 +16,7 @@ import { Data } from 'src/app/core/models/data';
   styleUrls: ['./table-with-dragger.component.scss'],
 })
 export class TableWithDraggerComponent implements OnInit, AfterViewInit {
-  dataSet: Data;
+  @Input() dataSet: Data;
   @ViewChild('basicTable', { read: ElementRef })
   basicTable!: ElementRef;
 

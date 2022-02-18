@@ -8,25 +8,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { AppComponent } from './app.component';
 import { TableComponent } from './shared/components/table/table.component';
 import { TableWithDraggerComponent } from './shared/components/table-with-dragger/table-with-dragger.component';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { PaginationPipe } from './shared/pipes/pagination/pagination.pipe';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, TableComponent, TableWithDraggerComponent],
+  declarations: [
+    AppComponent,
+    TableComponent,
+    TableWithDraggerComponent,
+    PaginationPipe,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzTableModule,
+    NzListModule,
     DragDropModule,
     NzIconModule,
+    NzGridModule,
+    NzPaginationModule,
     NzTabsModule,
+    NzTableModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
