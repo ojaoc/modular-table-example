@@ -29,7 +29,9 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  reorderCol(event: CdkDragSortEvent<{ name: string; title: string }[]>) {
+  reorderCol(
+    event: CdkDragSortEvent<{ name: string; title: string; checked: boolean }[]>
+  ) {
     moveItemInArray(
       event.container.data,
       event.previousIndex,

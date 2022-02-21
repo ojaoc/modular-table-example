@@ -1,28 +1,61 @@
-import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from '@angular/core';
-import { Data } from 'src/app/core/models/data';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core'
+import { Data } from 'src/app/core/models/data'
 @Component({
   selector: 'app-filter-table-modal',
   templateUrl: './filter-table-modal.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FilterTableComponent {
-  @Input() filterData!: Data
+export class FilterTableComponent implements OnInit {
+  innerFilterData: Data
 
-  @Input() isVisible: boolean;
+  @Input() filterData: Data
+  @Input() isVisible: boolean
 
-  @Output() isVisibleChange: EventEmitter<boolean> = new EventEmitter();
+  @Output() isVisibleChange: EventEmitter<boolean> = new EventEmitter()
+  @Output() filterDataChange: EventEmitter<Data> = new EventEmitter()
 
   constructor() {
-    this.isVisible = false;
+    this.isVisible = false
+    this.innerFilterData = { columns: [], data: [] }
+    this.filterData = { columns: [], data: [] }
   }
 
-  handleConfirm(): void {
-    this.isVisible = false
-    this.isVisibleChange.emit(this.isVisible)
+  ngOnInit(): void {
+    this.bootstrapComponent()
   }
 
-  handleCancel(): void {
+  async handleConfirm(): Promise<void> {
     this.isVisible = false
     this.isVisibleChange.emit(this.isVisible)
+
+    this.filterDataChange.emit(this.innerFilterData)
+
+    await this.delay(350)
+
+    this.bootstrapComponent()
+  }
+
+  async handleCancel(): Promise<void> {
+    this.isVisible = false
+    this.isVisibleChange.emit(this.isVisible)
+
+    await this.delay(350)
+
+    this.bootstrapComponent()
+  }
+
+  private bootstrapComponent() {
+    this.innerFilterData = JSON.parse(JSON.stringify(this.filterData))
+  }
+
+  private delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms))
   }
 }

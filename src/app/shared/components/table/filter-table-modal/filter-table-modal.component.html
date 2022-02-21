@@ -5,10 +5,9 @@
   (nzOnOk)="handleConfirm()"
 >
   <ng-container *nzModalContent>
-    <p class="example-box" *ngFor="let column of filterData.columns">
+    <p class="example-box" *ngFor="let column of innerFilterData.columns">
       <span nz-checkbox [(ngModel)]="column.checked">
         {{ column.title }}
-        <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
       </span>
     </p>
   </ng-container>
