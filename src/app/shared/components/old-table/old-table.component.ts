@@ -16,7 +16,9 @@ export class OldTableComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  sort(event: CdkDragSortEvent<{ name: string; title: string }[]>) {
+  sort(
+    event: CdkDragSortEvent<{ name: string; title: string; checked: boolean }[]>
+  ) {
     moveItemInArray(
       event.container.data,
       event.previousIndex,
