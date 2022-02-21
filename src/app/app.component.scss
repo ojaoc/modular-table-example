@@ -1,6 +1,74 @@
+@import "../scss/variables";
+@import "../scss/material-design-icons";
+
 .app-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* General icon button */
+// button
+.icon-button {
+  border-radius: 2px;
+  padding: 0.1rem 0.2rem;
+
+  &:hover {
+    background: $regent-gray;
+  }
+
+  &:disabled {
+    background: none;
+  }
+}
+
+.icon-button--table-selected {
+  background: none;
+
+  &:hover {
+    background: none;
+  }
+}
+
+// icon
+.icon-button__icon {
+  color: $tundora;
+  display: inline-block;
+  font-size: 2rem;
+
+  .icon-button--table-selected & {
+    color: $white;
+  }
+}
+
+// modifier by size
+.icon-button__icon--size-xs {
+  font-size: $font-s;
+}
+
+.icon-button__icon--size-s {
+  font-size: $font-m;
+}
+
+// modifier by functionality
+.icon-button__icon--link {
+  color: $regent-gray;
+}
+
+.icon-button--active .icon-button__icon {
+  color: $crusta;
+}
+
+.icon-button:disabled .icon-button__icon {
+  color: $silver;
+}
+
+.clear-icon-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
 }

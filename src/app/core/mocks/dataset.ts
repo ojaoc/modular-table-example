@@ -5,26 +5,32 @@ export const dataset: Data = {
     {
       name: 'name',
       title: 'Name',
+      checked: true,
     },
     {
       name: 'age',
       title: 'Age',
+      checked: true,
     },
     {
       name: 'address',
       title: 'Address',
+      checked: true,
     },
     {
       name: 'phone',
       title: 'Phone',
+      checked: true,
     },
     {
       name: 'email',
       title: 'Email',
+      checked: true,
     },
     {
       name: 'nationality',
       title: 'Nationality',
+      checked: true,
     },
   ],
   data: [

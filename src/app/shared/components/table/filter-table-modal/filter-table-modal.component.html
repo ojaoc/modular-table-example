@@ -1,0 +1,14 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="Filter table headers"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleConfirm()"
+>
+  <ng-container *nzModalContent>
+    <p class="example-box" *ngFor="let column of innerFilterData.columns">
+      <span nz-checkbox [(ngModel)]="column.checked">
+        {{ column.title }}
+      </span>
+    </p>
+  </ng-container>
+</nz-modal>

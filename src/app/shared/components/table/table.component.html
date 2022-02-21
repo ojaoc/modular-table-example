@@ -1,4 +1,20 @@
 <div class="table-container">
+  <!-- Filter table -->
+  <div>
+    <button
+      type="button"
+      class="button icon-button table-util__customize-button"
+      nzPlacement="bottomRight"
+      (click)="showModal()"
+    >
+      <app-filter-table-modal
+        [(isVisible)]="isVisible"
+        [(filterData)]="dataSet"
+      ></app-filter-table-modal>
+
+      <span class="material-icons"> filter_list </span>
+    </button>
+  </div>
   <nz-list nzBordered>
     <div
       nz-row
@@ -15,13 +31,17 @@
         cdkDragLockAxis="x"
         cdkDrag
       >
-        <nz-list-header class="example-box" cdkDragHandle>
-          {{ column.title }}
-          <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
-        </nz-list-header>
-        <nz-list-item *ngFor="let item of dataSet.data | pagination: page:size">
-          {{ item[column.name] }}
-        </nz-list-item>
+        <div *ngIf="column.checked">
+          <nz-list-header class="example-box" cdkDragHandle>
+            {{ column.title }}
+            <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
+          </nz-list-header>
+          <nz-list-item
+            *ngFor="let item of dataSet.data | pagination: page:size"
+          >
+            {{ item[column.name] }}
+          </nz-list-item>
+        </div>
       </div>
     </div>
   </nz-list>
