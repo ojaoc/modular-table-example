@@ -51,7 +51,7 @@ export class FilterTableComponent implements OnInit {
     this.bootstrapComponent()
   }
 
-  private bootstrapComponent() {
+  bootstrapComponent() {
     this.innerFilterData = JSON.parse(JSON.stringify(this.filterData))
   }
 
