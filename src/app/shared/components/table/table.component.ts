@@ -12,11 +12,19 @@ export class TableComponent implements OnInit {
   dataSet: Data
   page: number
   size: number
+  isVisible: boolean
+  checked: boolean
 
   constructor() {
     this.dataSet = dataset
     this.page = 1
     this.size = 10
+    this.isVisible = false
+    this.checked = true
+  }
+
+  showModal(): void {
+    this.isVisible = true
   }
 
   ngOnInit(): void {}
