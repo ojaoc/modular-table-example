@@ -1,4 +1,4 @@
-import { Data } from '../models/data'
+import { Data } from '../models/data';
 
 export const dataset: Data = {
   columns: [
@@ -2435,4 +2435,4 @@ export const dataset: Data = {
       nationality: 'China',
     },
   ],
-}
+};

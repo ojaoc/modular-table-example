@@ -1,15 +1,5 @@
 .table-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.pagination-container {
-  margin: 1rem 0;
-}
-
-nz-list-header {
-  min-width: 100px;
+  width: 960px;
 }
 
 .example-box {
@@ -33,36 +23,25 @@ nz-list-header {
   position: absolute;
   margin: 0;
   top: 50%;
-  right: 5px;
+  right: 1rem;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-.cdk-drag-preview nz-list-item {
-  text-indent: 1000%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.cdk-drag-preview nz-list-header {
+.cdk-drag-preview {
   box-sizing: border-box;
   border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
-  min-height: 47px;
-  vertical-align: middle;
-  padding: 0 1rem;
-  background: rgb(255, 255, 255) !important;
+  padding: 1rem;
+  background: rgb(250, 250, 250) !important;
 }
 
-.cdk-drag-placeholder nz-list-header {
+.cdk-drag-placeholder {
   background: #ccc !important;
-  -webkit-box-shadow: inset 0px 0px 0px 3px #999;
-  -moz-box-shadow: inset 0px 0px 0px 3px #999;
-  box-shadow: inset 0px 0px 0px 3px #999;
-  //border: dotted 3px #999 !important;
+  border: dotted 3px #999 !important;
   /* Hide the text. */
   text-indent: 1000%;
   white-space: nowrap;

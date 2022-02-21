@@ -1,3 +1,13 @@
 <div class="app-container">
-  <app-table></app-table>
+  <nz-tabset>
+    <nz-tab nzTitle="Old Table (ng zorro list)">
+      <app-old-table [dataSet]="tableData"></app-old-table>
+    </nz-tab>
+    <nz-tab nzTitle="Table (ng zorro list)">
+      <app-table [dataSet]="tableData"></app-table>
+    </nz-tab>
+    <nz-tab nzTitle="Table (with table dragger)">
+      <app-table-with-dragger [dataSet]="tableData"></app-table-with-dragger>
+    </nz-tab>
+  </nz-tabset>
 </div>
