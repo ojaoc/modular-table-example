@@ -8,7 +8,6 @@ import {
 } from '@angular/core';
 import { dataset } from 'src/app/core/mocks/dataset';
 import { Data } from 'src/app/core/models/data';
-// import tableDragger from 'table-dragger';
 
 @Component({
   selector: 'app-table-with-dragger',
@@ -17,19 +16,15 @@ import { Data } from 'src/app/core/models/data';
 })
 export class TableWithDraggerComponent implements OnInit, AfterViewInit {
   @Input() dataSet: Data;
-  @ViewChild('basicTable', { read: ElementRef })
-  basicTable!: ElementRef;
+  @ViewChild('basicTable', { read: ElementRef }) basicTable!: ElementRef;
 
   constructor() {
     this.dataSet = dataset;
-
-    console.log('data', this.dataSet);
+    console.log('dataSet', this.dataSet);
+    // this.table.nativeElement.querySelector('table')
   }
 
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    console.log('this.basicTable', this.basicTable.nativeElement);
-    // tableDragger(this.basicTable);
-  }
+  ngAfterViewInit(): void {}
 }

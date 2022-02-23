@@ -1,10 +1,17 @@
 <div class="table-container">
-  <nz-table #basicTable [nzData]="dataSet.data">
+  <nz-table
+    #basicTable
+    [nzData]="dataSet.data"
+    appDragAndDrop
+    [element]="basicTable['elementRef']"
+  >
     <thead>
       <tr class="example-list">
         <th class="example-box" *ngFor="let column of dataSet.columns">
-          {{ column.title }}
-          <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
+          <div class="group-handle">
+            <span>{{ column.title }}</span>
+            <i class="header-icon" nz-icon nzType="menu" nzTheme="outline"></i>
+          </div>
         </th>
       </tr>
     </thead>

@@ -13,8 +13,10 @@ import { NzListModule } from 'ng-zorro-antd/list';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
 import { OldTableComponent } from './shared/components/old-table/old-table.component';
+import { DragAndDropDirective } from './shared/components/table-with-dragger/directives/drag-and-drop.directive';
 import { TableWithDraggerComponent } from './shared/components/table-with-dragger/table-with-dragger.component';
 import { TableComponent } from './shared/components/table/table.component';
 import { PaginationPipe } from './shared/pipes/pagination/pagination.pipe';
@@ -28,6 +30,7 @@ registerLocaleData(en);
     TableWithDraggerComponent,
     PaginationPipe,
     OldTableComponent,
+    DragAndDropDirective,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +44,10 @@ registerLocaleData(en);
     NzPaginationModule,
     NzTabsModule,
     NzTableModule,
+    DragulaModule.forRoot(),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
+  exports: [DragAndDropDirective],
 })
 export class AppModule {}
