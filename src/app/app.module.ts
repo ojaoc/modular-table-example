@@ -6,10 +6,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzListModule } from 'ng-zorro-antd/list';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
@@ -18,8 +20,9 @@ import { AppComponent } from './app.component';
 import { OldTableComponent } from './shared/components/old-table/old-table.component';
 import { DragAndDropDirective } from './shared/components/table-with-dragger/directives/drag-and-drop.directive';
 import { TableWithDraggerComponent } from './shared/components/table-with-dragger/table-with-dragger.component';
+import { FilterTableComponent } from './shared/components/table/filter-table-modal/filter-table-modal.component';
 import { TableComponent } from './shared/components/table/table.component';
-import { PaginationPipe } from './shared/pipes/pagination/pagination.pipe';
+import { PaginationPipe } from './shared/pipes/pagination.pipe';
 
 registerLocaleData(en);
 
@@ -27,8 +30,9 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     TableComponent,
-    TableWithDraggerComponent,
+    FilterTableComponent,
     PaginationPipe,
+    TableWithDraggerComponent,
     OldTableComponent,
     DragAndDropDirective,
   ],
@@ -42,6 +46,8 @@ registerLocaleData(en);
     NzIconModule,
     NzGridModule,
     NzPaginationModule,
+    NzModalModule,
+    NzCheckboxModule,
     NzTabsModule,
     NzTableModule,
     DragulaModule.forRoot(),

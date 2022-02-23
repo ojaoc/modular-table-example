@@ -1,0 +1,145 @@
+// Colors
+$alabaster: #f9f9f9;
+$alto: #e0e0e0;
+$amber: #ffc206;
+$american-silver: #cecece;
+$athens-gray: #e9ebf1;
+$atlantis: #78c72d;
+$beauty-bush: #f2cdcd;
+$black: #000;
+$black--opacity-half: #00000080;
+$black--opacity-low: #00000026;
+$blue-bayoux: #526482;
+$blue-chill: #0f9c8c;
+$blue-ribbon: #1c3cfc;
+$boston-blue: #319dbb;
+$boston-blue--opacity-15: #319dbb26;
+$burning-orange: #fe743c;
+$burning-orange--opacity-15: #fe743c26;
+$buttermilk: #ffedb3;
+$camelot: #973354;
+$caribbean-green: #0dc0b0;
+$catskill-white: #e6ebf3;
+$cerulean: #00a8f4;
+$christi: #3db014;
+$cobalt: #073acb;
+$coral-red: #fe3c3c;
+$crusta: #fd8433;
+$curious-blue: #13a6dd;
+$dark-cyan: #0cad9c;
+$dark-red: #850202;
+$dodger-blue: #1890ff;
+$dove-gray: #6f6f6f;
+$dusty-gray: #9c9c9c;
+$dusty-gray--opacity-half: #97979780;
+$ecstasy: #fc821c;
+$endeavour: #0767b0;
+$french-pass: #bcf0ff;
+$fun-blue: #145da0;
+$fun-blue--opacity-10: #145da01a;
+$gallery: #efefef;
+$geyser: #dadee8;
+$gorse: #ffeb3b;
+$governor-bay: #3041ae;
+$gray: #8f8f8f;
+$gray-nurse: #e8e9e8;
+$gull-gray: #949eb1;
+$heather: #bdc6d6;
+$japanese-laurel: #298608;
+$java: #17a7d0;
+$java--opacity-10: #17a7d01a;
+$june-bud: #b5d96b;
+$light-gray: #bfbfbf;
+$lime-green: #057242;
+$link-water: #e0f0f7;
+$lynch: #6c7c97;
+$mamba: #8f7e9a;
+$mercury: #e4e3e3;
+$monarch: #910b17;
+$nepal: #90a2bd;
+$nobel: #b4b4b4;
+$noghrei-silver: #bdbdbd;
+$orange-peel: #ff9800;
+$pale-slate: #d8d7d8;
+$pattens-blue: #d9e5ff;
+$pattens-blue--opacity-none: #d9e5ff00;
+$pear: #cddd39;
+$persian-blue: #1321dd;
+$persian-green: #098;
+$persian-red: #c33;
+$pigeon-post: #acbcd7;
+$pomegranate: #f44436;
+$purple-heart: #673ab8;
+$quartz: #4a4a4a;
+$red-berry: #960000;
+$regent-gray: #7c89a1;
+$regent-gray--opacity-half: #7c89a180;
+$retro-blue: #2569f6;
+$rosso-corsa: #d20000;
+$royal-blue: #7055e8;
+$science-blue: #0a49d8;
+$scooter: #40cdd9;
+$shamrock: #35e291;
+$shiraz: #c00b1b;
+$shiraz--opacity-half: #c00b1b80;
+$sidecar: #f5e0c8;
+$silver: #c2c2c2;
+$silver-chalice: #aeaeae;
+$silver--opacity-half: #c2c2c280;
+$sorbus: #fc7809;
+$strong-red: #c00606;
+$strong-red--opacity-20: #c0060633;
+$sunglow: #fec43c;
+$supernova: #fecb00;
+$sushi: #8bc34a;
+$swirl: #d4d1c6;
+$tabasco: #b21014;
+$tahiti-gold: #e29008;
+$totem-pole: #a10505;
+$tumbleweed: #dbad7f;
+$tundora: #444;
+$tundora--opacity-half: #44444480;
+$varden: #fff6da;
+$we-peep: #f8dcdc;
+$westar: #e5e3dd;
+$whisper: #f6f7fa;
+$white: #fff;
+$white--opacity-half: #ffffff80;
+$wild-sand: #f6f6f6;
+
+// Font-size
+$font-xxxs: 0.8rem;
+$font-xxs: 1rem;
+$font-xs: 1.2rem;
+$font-s: 1.4rem;
+$font-m: 1.6rem;
+$font-l: 1.8rem;
+$font-xl: 2.4rem;
+$font-xxl: 3.2rem;
+$font-xxxl: 4rem;
+
+// Line-height
+$line-height-xs: 1.2rem;
+$line-height-s: 1.6rem;
+$line-height-m: 2rem;
+$line-height-l: 2.4rem;
+$line-height-xl: 3.2rem;
+$line-height-xxl: 4rem;
+$line-height-xxxl: 4.8rem;
+
+// Media breakpoints
+$screen-medium: 600px; // tablet
+$screen-large: 1024px; // laptop
+$screen-extra-large: 1920px;
+
+// Spacing
+:root {
+  --spacing-xxs: 0.4rem;
+  --spacing-xs: 0.8rem;
+  --spacing-s: 1.6rem;
+  --spacing-m: 2.4rem;
+  --spacing-l: 3.2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 4.8rem;
+  --spacing-xxxl: 6.4rem;
+}
