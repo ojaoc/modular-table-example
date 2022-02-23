@@ -15,7 +15,6 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
 import { OldTableComponent } from './shared/components/old-table/old-table.component';
 import { DragAndDropDirective } from './shared/components/table-with-dragger/directives/drag-and-drop.directive';
@@ -50,7 +49,6 @@ registerLocaleData(en);
     NzCheckboxModule,
     NzTabsModule,
     NzTableModule,
-    DragulaModule.forRoot(),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
